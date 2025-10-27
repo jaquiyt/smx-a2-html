@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curs </title>
+</head>
+<body>
+    <header>
+        <h1>Inscripció al Curs Online de...</h1>
+    </header>
+    <main>
+        <form action="" method="get">
+            <fieldset>
+                <legend><h3>Dades Personals</h3></legend>
+                <label for="Nom">Nom complet: </label>
+                <input type="text" name="nom" id="nom" placeholder="Ex: Oriol Lloreda" maxlength="25" minlength="5" required>
+                <br><br>
+                <label for="email">Correu elctronic: </label>
+                <input type="email" name="email" id="email" required>
+                <br><br>
+                <label for="tel">Numero de telefon: </label>
+                <input type="tel" name="tel" id="tel" pattern="[6-7]{1}[0-9]{8}" required>
+                <br><br>
+                <label for="date">Data de naixement: </label>
+                <input type="date" name="date" id="date" required>
+                <br>
+            </fieldset>
+            <fieldset>
+                <legend><h3>Tipus de Curs i Experiència prèvia</h3></legend>
+                <label for="cursos">Cursos disponibles: </label>
+                <select id="cursos" name="cursos" multiple size="8">
+                    <optgroup label="Programació">
+                        <option value="programacio_basica">Programació Bàsica</option>
+                        <option value="desenvolupament_web">Desenvolupament Web</option>
+                        <option value="desenvolupament_videojocs">Desenvolupament de Videojocs</option>
+                    </optgroup>
+                    <optgroup label="Administració i Sistemes">
+                        <option value="administracio_sistemes">Administració de Sistemes</option>
+                        <option value="xarxes">Gestió de Xarxes</option>
+                        <option value="seguretat_informatica">Seguretat Informàtica</option>
+                    </optgroup>
+                    <optgroup label="Altres categories">
+                        <option value="disseny_grafic">Disseny Gràfic</option>
+                        <option value="bases_dades">Gestió de Bases de Dades</option>
+                        <option value="intel_ligencia_artificial">Intel·ligència Artificial</option>
+                    </optgroup>
+                </select>
+
+                <br><br>
+                <label>Nivell: </label>
+                <input type="radio" name="novell" id="novell" value="1" required>
+                <label for="novell">Novell</label>
+                <input type="radio" name="intermedi" id="intermedi" value="2">
+                <label for="intermedi">Intermedi</label>
+                <input type="radio" name="Avançat" id="Avançat" value="3">
+                <label for="avançat">Avançat</label>
+                <br><br>
+            </fieldset>
+            <fieldset>
+                <legend><h3>Interessos i motivació del curs</h3></legend>
+
+                <label>Interesos: </label>
+                <input type="checkbox" id="projectes" name="projectes" value="projectes">
+                <label for="projectes">Projectes Practics</label>
+                <input type="checkbox" id="tutories" name="tutories" value="tutories">
+                <label for="tutories">Tutories Online</label>
+                <input type="checkbox" id="certificats" name="certificats" value="certificats">
+                <label for="certificats">Certificats</label>
+                <br><br>
+
+                <label for="textbreu">Perque aquests Cursos?</label>
+                <br>
+                <textarea id="textbreu" name="textbreu" rows="3" cols="30" placeholder="Breu text explicant per què vols realitzar el curs o els cursos escollits" required minlength="20" maxlength="200"></textarea>
+                <br><br>
+                <label for="lloc_treball">Lloc de treball: </label>
+                <input list="lloc_treballs" id="lloc_treball" name="lloc_treball" placeholder="Frontend, Backend..." required>
+                <datalist id="lloc_treballs">
+                    <option value="Ciber Seguretat"></option>
+                    <option value="DevOps"></option>
+                    <option value="Frontend"></option>
+                    <option value="Backend"></option>
+                </datalist>
+            </fieldset>
+            <fieldset>
+                <legend><h3>Fitxer i acceptació de condicions</h3></legend>
+
+                <label for="document">Pujar archiu pdf: </label>
+                <br>
+                <input type="file" id="document" name="document" accept=".pdf">
+                <input type="hidden" name="document" value="document">
+                <br><br>
+                <label for="condicions"><a href="https://policies.google.com/terms?hl=ca" target="_blank" rel="noopener noreferrer">Accepto les condicions</a></label>
+                <input type="checkbox" name="condicions" id="condicions" required>
+            </fieldset>
+            <br>
+            <button type="submit">Enviar formulari</button>
+            <button type="reset">Reiniciar</button>
+        </form>
+    </main>
+    <footer>
+        <p>Oriol Lloreda&copy; contacte: <a href="mailto:oriol_lloredamorales@iescarlesvallbona.cat">oriol_lloredamorales@iescarlesvallbona.cat</a></p>
+    </footer>
+</body>
+</html>
