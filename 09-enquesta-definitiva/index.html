@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Enquesta Definitiva: Superherois</title>
+</head>
+<body>
+    <h1>Enquesta Definitiva: Superherois</h1>
+
+    <form action="enquesta_superherois.php" method="POST">
+
+    <fieldset>
+        <legend><h2>Dades Personals</h2></legend>
+
+        <label for="nom">Nom del superheroi:</label>
+        <input type="text" name="nom" id="nom" required minlength="2" maxlength="30"><br><br>
+
+        <label for="email">Correu del representant:</label>
+        <input type="email" name="email" id="email" required><br><br>
+
+        <label for="password">Clau secreta:</label>
+        <input type="password" name="password" id="password" required minlength="6"><br><br>
+
+        <label for="batalles">Nombre de batalles lluitades aquest any:</label>
+        <input type="number" name="batalles" id="batalles" min="0" max="999" required><br><br>
+
+        <label for="poder">Nivell de poder (1-100):</label>
+        <input type="range" name="poder" id="poder" min="1" max="100" required><br><br>
+
+        <label for="data">Data de la primera aparició:</label>
+        <input type="date" name="data" id="data" required><br><br>
+
+        <label for="hora">Hora disponible per reunions:</label>
+        <input type="time" name="hora" id="hora" required><br><br>
+
+        <label for="color">Color principal del vestit:</label>
+        <input type="color" name="color" id="color" required><br><br>
+
+        <label for="url">Pàgina web oficial:</label>
+        <input type="url" name="url" id="url" required><br><br>
+
+        <label for="tel">Telèfon d'emergències:</label>
+        <input type="tel" name="tel" id="tel" required pattern="[0-9]{9}" title="Introdueix un número de 9 números"><br><br>
+
+        <p>Tipus de personatge:</p>
+        <input type="radio" name="tipus" id="heroi" value="heroi" required>
+        <label for="heroi">Heroi</label>
+
+        <input type="radio" name="tipus" id="ajudant" value="ajudant">
+        <label for="ajudant">Ajudant</label>
+
+        <input type="radio" name="tipus" id="malvat" value="malvat">
+        <label for="malvat">Malvat</label><br><br>
+
+        <p>Superpoders:</p>
+        <input type="checkbox" name="poders" id="volar" value="volar">
+        <label for="volar">Volar</label>
+
+        <input type="checkbox" name="poders" id="invisibilitat" value="invisibilitat">
+        <label for="invisibilitat">Invisibilitat</label>
+
+        <input type="checkbox" name="poders" id="superforca" value="superforca">
+        <label for="superforca">Superforça</label>
+
+        <input type="checkbox" name="poders" id="velocitat" value="velocitat">
+        <label for="velocitat">Velocitat</label>
+
+        <input type="checkbox" name="poders" id="telepatia" value="telepatia">
+        <label for="telepatia">Telepatia</label><br><br>
+
+        <label for="univers">Univers:</label>
+        <select name="univers" id="univers" required>
+            <option value="">--Tria el teu univers--</option>
+            <option value="Marvel">Marvel</option>
+            <option value="DC">DC</option>
+            <option value="Manga">Manga</option>
+            <option value="Altres">Altres</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend><h2>Preguntes Temàtica 1</h2></legend>
+
+        <label>1. Quin és el teu enemic preferit?</label><br>
+        <input type="radio" name="enemig" id="joker" value="Joker" required><label for="joker">Joker</label>
+        <input type="radio" name="enemig" id="thanos" value="Thanos"><label for="thanos">Thanos</label>
+        <input type="radio" name="enemig" id="loki" value="Loki"><label for="loki">Loki</label>
+        <input type="radio" name="enemig" id="altres_enemig" value="Altres"><label for="altres_enemig">Altres</label><br><br>
+
+        <label>2. Quin seria el teu gadget ideal?</label><br>
+        <input type="radio" name="gadget" id="telaranyes" value="Telaranyes" required><label for="telaranyes">Telaranyes de Spider-Man</label>
+        <input type="radio" name="gadget" id="martell" value="Martell de Thor"><label for="martell">Martell de Thor</label>
+        <input type="radio" name="gadget" id="escut" value="Escut del Capità Amèrica"><label for="escut">Escut del Capità Amèrica</label><br><br>
+
+        <label>3. Amb quin superheroi mai faries equip?</label><br>
+        <input type="radio" name="noequip" id="deadpool" value="Deadpool" required><label for="deadpool">Deadpool</label>
+        <input type="radio" name="noequip" id="ironman" value="IronMan"><label for="ironman">Iron Man</label>
+        <input type="radio" name="noequip" id="superman" value="Superman"><label for="superman">Superman</label><br><br>
+
+        <label>4. Quin poder t'agradaria millorar?</label><br>
+        <input type="radio" name="millorar" id="forca" value="forca" required><label for="forca">Superforça</label>
+        <input type="radio" name="millorar" id="intel" value="intel·ligència"><label for="intel">Intel·ligència</label>
+        <input type="radio" name="millorar" id="resistencia" value="resistència"><label for="resistencia">Resistència</label><br><br>
+
+        <label>5. Quin és el teu hàbitat ideal?</label><br>
+        <input type="radio" name="habitat" id="ciutat" value="ciutat" required><label for="ciutat">Ciutat</label>
+        <input type="radio" name="habitat" id="espai" value="espai"><label for="espai">Espai</label>
+        <input type="radio" name="habitat" id="ocea" value="oceà"><label for="ocea">Oceà</label>
+        <input type="radio" name="habitat" id="selva" value="selva"><label for="selva">Selva</label><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend><h2>Preguntes Temàtica 2</h2></legend>
+
+        <label>6. Quin és el teu mitjà de transport preferit?</label><br>
+        <input type="radio" name="transport" id="avio" value="avió" required><label for="avio">Avió</label>
+        <input type="radio" name="transport" id="moto" value="moto"><label for="moto">Moto</label>
+        <input type="radio" name="transport" id="teletransport" value="teletransport"><label for="teletransport">Teletransport</label><br><br>
+
+        <label>7. Quin objectiu et motiva més?</label><br>
+        <input type="radio" name="objectiu" id="justicia" value="justicia" required><label for="justicia">Justícia</label>
+        <input type="radio" name="objectiu" id="venjanca" value="venjança"><label for="venjanca">Venjança</label>
+        <input type="radio" name="objectiu" id="fama" value="fama"><label for="fama">Fama</label><br><br>
+
+        <label>8. Quin color et representa millor?</label><br>
+        <input type="radio" name="colorrep" id="vermell" value="vermell" required><label for="vermell">Vermell</label>
+        <input type="radio" name="colorrep" id="blau" value="blau"><label for="blau">Blau</label>
+        <input type="radio" name="colorrep" id="negre" value="negre"><label for="negre">Negre</label><br><br>
+
+        <label>9. Quin és el teu punt feble?</label><br>
+        <input type="radio" name="feble" id="orgull" value="orgull" required><label for="orgull">Orgull</label>
+        <input type="radio" name="feble" id="por" value="por"><label for="por">Por</label>
+        <input type="radio" name="feble" id="confiança" value="confiança"><label for="confiança">Confiança excessiva</label><br><br>
+
+        <label>10. Quin paper jugaries en una aliança galàctica?</label><br>
+        <input type="radio" name="paper" id="lider" value="líder" required><label for="lider">Líder</label>
+        <input type="radio" name="paper" id="estrateg" value="estrateg"><label for="estrateg">Estrateg</label>
+        <input type="radio" name="paper" id="soldat" value="soldat"><label for="soldat">Soldat</label>
+        <input type="radio" name="paper" id="espia" value="espia"><label for="espia">Espia</label><br><br>
+    </fieldset>
+
+    <input type="submit" value="Enviar Enquesta">
+    <input type="reset" value="Esborrar Dades">
+
+    </form>
+</body>
+</html>
